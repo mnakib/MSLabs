@@ -2,9 +2,12 @@
 # Deploy ADDS on Server Core
 
 ## Install the Active Directory Domain Services (ADDS) role
+```
 Install-WindowsFeature AD-Domain-Services –IncludeManagementTools -Verbose
-
+```
+```
 Get-WindowsFeature -Name *AD*
+```
 
 ## Use ADDSDeployment module cmdlets to deploy a new domain and forest, or additional domain controller:
 
