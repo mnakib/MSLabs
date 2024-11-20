@@ -35,10 +35,10 @@ Get-WindowsFeature RSAT-AD*,RSAT-DNS*,RSAT-DHCP* | Install-WindowsFeature
 
 # Deploy Exchange Server 2019
 
-For the most updated documentation, use this [link](https://learn.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019)
+For the most updated documentation article on to install Exchange Server, use this [link](https://learn.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019)
 
-## Exchange Server Prereq
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#exchange-2019-prerequisites-for-preparing-active-directory
+## [Exchange Server Prereq](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#exchange-2019-prerequisites-for-preparing-active-directory)
+    
 
     Install .NET Framework 4.8
 
