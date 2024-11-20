@@ -159,7 +159,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-IIS6ManagementCompatibili
 
 Install the Exchange Management Tools
 ```
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:ManagementTools /on:"Contoso Corporation"
+<Virtual DVD drive letter>:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:ManagementTools /on:"Contoso Corporation"
 
 ```
         
@@ -185,7 +185,7 @@ Install the Exchange Management Tools
 Your account needs to be a member of the Schema Admins and Enterprise Admins security groups.
 
 ```
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareSchema
+<Virtual DVD drive letter>:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareSchema
 ```
 
 #### Prepare Active Directory
@@ -195,7 +195,7 @@ Your account needs to be a member of the Enterprise Admins security group.
 If you want to enable Active Directory split permissions, you must also provide the _/ActiveDirectorySplitPermissions:true_ parameter
 
 ```
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAD /OrganizationName:"<Organization name>"
+<Virtual DVD drive letter:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAD /OrganizationName:"<Organization name>"
 
 ```
 
@@ -204,9 +204,9 @@ If you want to enable Active Directory split permissions, you must also provide 
 If you have multiple domains in your Active Directory forest, you may prepare one single domain or all of them
 
 ```
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareDomain[:<DomainFQDN>]
+<Virtual DVD drive letter:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareDomain[:<DomainFQDN>]
 
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAllDomains
+<Virtual DVD drive letter:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAllDomains
 ```
 
 #### Verify the installation
@@ -228,5 +228,5 @@ Using ADSI Edit, check Exchange objects on Domain, Schema and Configration parti
 ### [Unattended Installation - Core](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/unattended-installs?view=exchserver-2019)  
 
 ```
-Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation" /InstallWindowsComponents
+<Virtual DVD drive letter:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation" /InstallWindowsComponents
 ```
