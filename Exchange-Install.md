@@ -40,26 +40,27 @@ For the most updated documentation article on to install Exchange Server, use th
 ## [Exchange Server Prereq](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#exchange-2019-prerequisites-for-preparing-active-directory)
     
 
-Install .NET Framework 4.8
+Install [.NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
 
 ```
-$url = "https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe"
+.\ndp48-x86-x64-allos-enu.exe /q /norestart
 
-$destination = "C:\Exchange-Softs\ndp48-x86-x64-allos-enu.exe"
-
-Invoke-WebRequest -Uri $url -OutFile $destination
 ```
 
         
 
-    Install Visual C++ Redistributable Package for Visual Studio 2012
+Install [Visual C++ Redistributable Package for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=30679)
 
-        https://www.microsoft.com/download/details.aspx?id=30679
+```
+.\vcredist_x64.exe /q /norestart
+```
 
-    Install RSAT
 
-        Install-WindowsFeature RSAT-ADDS
+Install RSAT
 
+```
+Install-WindowsFeature RSAT-ADDS
+```
 
 
 == Windows Server Prereq for Exchange 2019
