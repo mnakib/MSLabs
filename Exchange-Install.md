@@ -105,54 +105,61 @@ Install Unified Communications Managed API 4.0
 
 Install the required Windows components
 
-On Windows Desktop Experience
+_On Windows Desktop Experience_
 
 ```
 Install-WindowsFeature Server-Media-Foundation, NET-Framework-45-Core, NET-Framework-45-ASPNET, NET-WCF-HTTP-Activation45, NET-WCF-Pipe-Activation45, NET-WCF-TCP-Activation45, NET-WCF-TCP-PortSharing45, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-Mgmt, RSAT-Clustering-PowerShell, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Lgcy-Mgmt-Console, Web-Metabase, Web-Mgmt-Console, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, Windows-Identity-Foundation, RSAT-ADDS
 ```
 
-On Windows Core
+_On Windows Core_
 ```
 Install-WindowsFeature Server-Media-Foundation, NET-Framework-45-Core, NET-Framework-45-ASPNET, NET-WCF-HTTP-Activation45, NET-WCF-Pipe-Activation45, NET-WCF-TCP-Activation45, NET-WCF-TCP-PortSharing45, RPC-over-HTTP-proxy, RSAT-Clustering, RSAT-Clustering-CmdInterface, RSAT-Clustering-PowerShell, WAS-Process-Model, Web-Asp-Net45, Web-Basic-Auth, Web-Client-Auth, Web-Digest-Auth, Web-Dir-Browsing, Web-Dyn-Compression, Web-Http-Errors, Web-Http-Logging, Web-Http-Redirect, Web-Http-Tracing, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Metabase, Web-Mgmt-Service, Web-Net-Ext45, Web-Request-Monitor, Web-Server, Web-Stat-Compression, Web-Static-Content, Web-Windows-Auth, Web-WMI, RSAT-ADDS
 ```        
         
 [Install the IIS URL Rewrite Module](https://www.iis.net/downloads/microsoft/url-rewrite)
 
+```
+.\URLRewrite_amd64.msi /quiet /norestart
+```
 
 
 
-=== Exchange Server Edge on Win2k19/Win22
+### Exchange Server Edge on Win2k19/Win22
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#exchange-2019-edge-transport-servers-on-windows-server-2019--windows-server-2022
+Install below softwares:
 
-    Install below softwares:
+[.NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
 
-        .NET Framework 4.8
+```
+.\ndp48-x86-x64-allos-enu.exe /q /norestart
+```
 
-            https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe
+[Visual C++ Redistributable Package for Visual Studio 2013](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)  
 
-        Visual C++ Redistributable Package for Visual Studio 2012
-
-            https://www.microsoft.com/download/details.aspx?id=30679
-
-
-=== Windows Client Prereq for Exchange Managment Tool
-
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#windows-client-prerequisites-for-the-exchange-2019-management-tools
-
-    Install the Visual C++ Redistributable Package for Visual Studio 2012
-
-        https://www.microsoft.com/download/details.aspx?id=30679
-
-    Install the required Windows components
-
-        Enable-WindowsOptionalFeature -Online -FeatureName IIS-IIS6ManagementCompatibility,IIS-Metabase -All
-
-    Install the Exchange Management Tools
-
-        <<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation"
+```
+.\vcredist_x64.exe /q /norestart
+```
 
 
+### [Windows Client Prereq for Exchange Managment Tool](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#windows-client-prerequisites-for-the-exchange-2019-management-tools)
+  
+[Install the Visual C++ Redistributable Package for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=30679)
+
+```
+.\vcredist_x64.exe /q /norestart
+```    
+
+Install the required Windows components
+
+```
+Enable-WindowsOptionalFeature -Online -FeatureName IIS-IIS6ManagementCompatibility,IIS-Metabase -All
+```    
+
+Install the Exchange Management Tools
+```
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation"
+
+```
         
 
 
