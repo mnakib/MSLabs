@@ -218,18 +218,15 @@ Using ADSI Edit, check Exchange objects on Domain, Schema and Configration parti
 
 
 
-== Deploy Exchange Server
+## [Deploy Exchange Server](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/deploy-new-installations?view=exchserver-2019)
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/deploy-new-installations?view=exchserver-2019
+    
 
-=== Attended Installation - GUI
-
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/install-mailbox-role?view=exchserver-2019
+### [Attended Installation - GUI](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/install-mailbox-role?view=exchserver-2019)
 
 
-=== Unattended Installation - Core
+### [Unattended Installation - Core](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/unattended-installs?view=exchserver-2019)  
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/deploy-new-installations/unattended-installs?view=exchserver-2019
-
-    Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation" /InstallWindowsComponents
-
+```
+Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation" /InstallWindowsComponents
+```
