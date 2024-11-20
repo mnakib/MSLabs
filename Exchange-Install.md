@@ -171,9 +171,8 @@ Install the Exchange Management Tools
 
               
 
-## Active Directory in Exchange Server organizations
+## [Active Directory in Exchange Server organizations](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/active-directory/active-directory?view=exchserver-2019)
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/active-directory/active-directory?view=exchserver-2019
 
 ### [Preparing AD for Exchange Server](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019)
 
