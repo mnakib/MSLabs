@@ -9,7 +9,9 @@ Install-WindowsFeature AD-Domain-Services –IncludeManagementTools -Verbose
 Get-WindowsFeature -Name *AD*
 ```
 
-## Use ADDSDeployment module cmdlets to deploy a new domain and forest, or additional domain controller:
+## Deploy a new domain and forest
+
+Use ADDSDeployment module cmdlets to deploy a new domain and forest, or additional domain controller
 
 ```
 Get-Command -Module ADDSDeployment
@@ -163,55 +165,56 @@ Install the Exchange Management Tools
         
 
 
-== Office Online Server system requirements - Optional
+## [Office Online Server system requirements - Optional](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/install-office-online-server?view=exchserver-2019#office-online-server-system-requirements)
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/install-office-online-server?view=exchserver-2019#office-online-server-system-requirements
+    
 
               
 
-== Active Directory in Exchange Server organizations
+## Active Directory in Exchange Server organizations
 
     https://learn.microsoft.com/en-us/exchange/plan-and-deploy/active-directory/active-directory?view=exchserver-2019
 
-=== Preparing AD for Exchange Server
+### [Preparing AD for Exchange Server](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019)
 
-    https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prepare-ad-and-domains?view=exchserver-2019
-
-
-==== Extend the Active Directory schema
-
-    Your account needs to be a member of the Schema Admins and Enterprise Admins security groups.
-
-    <Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareSchema
+    
 
 
-==== Prepare Active Directory
+#### Extend the Active Directory schema
 
-    Your account needs to be a member of the Enterprise Admins security group.
+Your account needs to be a member of the Schema Admins and Enterprise Admins security groups.
 
-    If you want to enable Active Directory split permissions, you must also provide the /ActiveDirectorySplitPermissions:true parameter
+```
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareSchema
+```
 
-    <Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAD /OrganizationName:"<Organization name>"
+#### Prepare Active Directory
 
+Your account needs to be a member of the Enterprise Admins security group.
 
-==== Prepare Active Directory Domains
+If you want to enable Active Directory split permissions, you must also provide the _/ActiveDirectorySplitPermissions:true_ parameter
 
-    If you have multiple domains in your Active Directory forest, you may prepare one single domain or all of them
+```
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAD /OrganizationName:"<Organization name>"
 
-    <Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareDomain[:<DomainFQDN>]
+```
 
-    <Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAllDomains
+#### Prepare Active Directory Domains
 
+If you have multiple domains in your Active Directory forest, you may prepare one single domain or all of them
 
-==== Verify the installation
+```
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareDomain[:<DomainFQDN>]
 
-    Chekc the log files
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /PrepareAllDomains
+```
 
-    Using ADSI Edit, check below objects
+#### Verify the installation
 
-        - rangeUpper is located in the Schema naming context in the properties of the ms-Exch-Schema-Version-Pt container.
-        - objectVersion (Default) is the objectVersion attribute located in the Default naming context in the properties of the Microsoft Exchange System Objects container.
-        - objectVersion (Configuration) is the objectVersion attribute located in the Configuration naming context in Services > Microsoft Exchange in the properties of the <Your Exchange Organization Name> container.
+Chekc the log files
+
+Using ADSI Edit, check Exchange objects on Domain, Schema and Configration partitions
+
 
 
 
