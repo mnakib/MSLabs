@@ -102,7 +102,7 @@ Install-WindowsFeature Server-Media-Foundation
 Install Unified Communications Managed API 4.0
 
 ```
-<DVDDriveLetter>:\.\UCMARunTime\Setup.exe -q
+<DVDDriveLetter>:.\UCMARunTime\Setup.exe -q
 ```
 
 Install the required Windows components
