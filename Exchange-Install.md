@@ -121,7 +121,7 @@ Install-WindowsFeature Server-Media-Foundation, NET-Framework-45-Core, NET-Frame
 [Install the IIS URL Rewrite Module](https://www.iis.net/downloads/microsoft/url-rewrite)
 
 ```
-.\URLRewrite_amd64.msi /quiet /norestart
+.\rewrite_amd64.msi /quiet /norestart
 ```
 
 
