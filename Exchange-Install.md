@@ -210,7 +210,7 @@ If you have multiple domains in your Active Directory forest, you may prepare on
 
 #### Verify the installation
 
-Chekc the log files
+Check the log files
 
 Using ADSI Edit, check Exchange objects on Domain, Schema and Configration partitions
 
