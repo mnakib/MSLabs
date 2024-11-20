@@ -157,7 +157,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-IIS6ManagementCompatibili
 
 Install the Exchange Management Tools
 ```
-<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation"
+<Virtual DVD drive letter>:\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:ManagementTools /on:"Contoso Corporation"
 
 ```
         
