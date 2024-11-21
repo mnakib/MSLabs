@@ -39,6 +39,19 @@ Get-WindowsFeature RSAT-AD*,RSAT-DNS*,RSAT-DHCP* | Install-WindowsFeature
 
 For the most updated documentation article on to install Exchange Server, use this [link](https://learn.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019)
 
+== Download Required Softwares
+
+Below software are needed on the server that will host the Exchange Server. Start by downloading them all and copy them on a drive accessible by the server.
+
+* [.NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
+
+* [Visual C++ Redistributable Package for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=30679)
+
+* [Visual C++ Redistributable Package for Visual Studio 2013](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+* [IIS URL Rewrite Module](https://www.iis.net/downloads/microsoft/url-rewrite)
+
+
 ## [Exchange Server Prereq](https://learn.microsoft.com/en-us/exchange/plan-and-deploy/prerequisites?view=exchserver-2019#exchange-2019-prerequisites-for-preparing-active-directory)
     
 
@@ -119,6 +132,8 @@ Install-WindowsFeature Server-Media-Foundation, NET-Framework-45-Core, NET-Frame
 ```        
         
 [Install the IIS URL Rewrite Module](https://www.iis.net/downloads/microsoft/url-rewrite)
+
+_The Windows Installer does not permit installation from a Remote Desktop Connection_ 
 
 ```
 .\rewrite_amd64.msi /quiet /norestart
