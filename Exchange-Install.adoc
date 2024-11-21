@@ -39,7 +39,7 @@ Get-WindowsFeature RSAT-AD*,RSAT-DNS*,RSAT-DHCP* | Install-WindowsFeature
 
 For the most updated documentation article on to install Exchange Server, use this [link](https://learn.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019)
 
-== Download Required Softwares
+## Download Required Softwares
 
 Below software are needed on the server that will host the Exchange Server. Start by downloading them all and copy them on a drive accessible by the server.
 
