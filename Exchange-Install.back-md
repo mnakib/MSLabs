@@ -43,7 +43,7 @@ For the most updated documentation article on to install Exchange Server, use th
 
 Below software are needed on the server that will host the Exchange Server. Start by downloading them all and copy them on a drive accessible by the server.
 
-* [.NET Framework 4.8](https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe)
+* https://download.visualstudio.microsoft.com/download/pr/014120d7-d689-4305-befd-3cb711108212/0fd66638cde16859462a6243a4629a50/ndp48-x86-x64-allos-enu.exe[.NET Framework 4.8]
 
 * [Visual C++ Redistributable Package for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=30679)
 
