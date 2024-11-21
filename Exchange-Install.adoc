@@ -83,7 +83,7 @@ Install-WindowsFeature RSAT-ADDS
     
 
 
-### Exchange Server 2019 Mailbox on Win2k19/Win22
+### Exchange Server 2019 Mailbox on Win2k19/Wink22
 
 Install below softwares:
 
