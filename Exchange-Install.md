@@ -244,3 +244,18 @@ Using ADSI Edit, check Exchange objects on Domain, Schema and Configration parti
 ```
 <Virtual DVD drive letter:\>.\Setup.exe /IAcceptExchangeServerLicenseTerms_DiagnosticDataOFF /Mode:Install /Roles:Mailbox /on:"Contoso Corporation" /InstallWindowsComponents
 ```
+
+
+
+#### [Connect Remotely to Exchange Server](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-exchange-servers-using-remote-powershell?view=exchange-ps#connect-to-a-remote-exchange-server)
+
+```
+$UserCredential = Get-Credential
+
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://<ServerFQDN>/PowerShell/ -Authentication Kerberos -Credential $UserCredential
+
+Import-PSSession $Session -DisableNameChecking
+```
+
+
+
