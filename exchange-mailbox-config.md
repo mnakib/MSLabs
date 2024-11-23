@@ -29,22 +29,26 @@ Set-Mailbox "<Mailbox Database Default Name>" -Name DB01
 ### Move a database file and logs
 
 ```
- Move-DatabasePath -Identity DB01 -EdbFilePath D:\DB01\DB01.edb -LogFolderPath E:\DB01
-
+Move-DatabasePath -Identity DB01 -EdbFilePath D:\DB01\DB01.edb -LogFolderPath E:\DB01
+```
+```
 Get-MailboxDatabase | select name,*path*
-
+```
+```
 Get-MailboxDatabase DB01 -Status | select name,*path*,*mounted*
 
- ```
+```
 
 
 ## Create a new databasse
 
 ```
 New-MailboxDatabase -Name DB03 -Server EXCH-01 -EdbFilePath D:\DB03\DB03.edb -LogFolderPath E:\DB03
-
+```
+```
 Get-MailboxDatabase -Status | select name,edbfilepath,logfolderpath,mounted | ft -auto
-
+```
+```
 Mount-Database DB03
 ```
 
