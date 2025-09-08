@@ -1,4 +1,8 @@
-**Azure CLI**: create a resource group, an Event Hubs namespace, and an Event Hub—all in one go.
+**Using Azure CLI**: 
+**- Create a resource group, an Event Hubs namespace, and an Event Hub—all**
+**- Create a producer and a consumer using Python**
+
+
 
 ### Step-by-Step Azure CLI Commands
 
