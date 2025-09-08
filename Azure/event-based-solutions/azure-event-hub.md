@@ -1,4 +1,4 @@
-**Using Azure CLI:**
+### Even Hub Configuration using Azure CLI:
 
 - **Create a resource group, an Event Hubs namespace, and an Event Hub**
 - **Create a producer and a consumer using Python**
